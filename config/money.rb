@@ -12,8 +12,6 @@ Money.default_bank = moe
 # we don't want to use some of the defaults that come with Money
 # set our own symbols in these cases
 currencies = Money::Currency.table
-currencies[:aed][:symbol] = 'AED'
-currencies[:sar][:symbol] = 'SAR'
 currencies[:sgd][:symbol] = 'S$'
 currencies[:aud][:symbol] = 'A$'
 currencies[:cad][:symbol] = 'C$'
@@ -23,17 +21,46 @@ currencies[:clp][:symbol] = 'CLP$'
 currencies[:cop][:symbol] = 'COL$'
 currencies[:mxn][:symbol] = 'MEX$'
 currencies[:usd][:symbol] = 'US$'
-currencies[:tnd][:symbol] = 'TND'
 currencies[:twd][:symbol] = 'NT$'
-currencies[:dzd][:symbol] = 'DZD'
+
+currencies[:aed][:symbol] = 'AED'
+currencies[:aed][:symbol_first] = true
+currencies[:sar][:symbol] = 'SAR'
+currencies[:sar][:symbol_first] = true
 currencies[:mad][:symbol] = 'MAD'
+currencies[:mad][:symbol_first] = true
+currencies[:dzd][:symbol] = 'DZD'
+currencies[:dzd][:symbol_first] = true
+currencies[:tnd][:symbol] = 'TND'
+currencies[:tnd][:symbol_first] = true
+currencies[:bhd][:symbol] = 'BHD'
+currencies[:bhd][:symbol_first] = true
+currencies[:jod][:symbol] = 'JOD'
+currencies[:jod][:symbol_first] = true
+currencies[:kwd][:symbol] = 'KWD'
+currencies[:kwd][:symbol_first] = true
+currencies[:omr][:symbol] = 'OMR'
+currencies[:omr][:symbol_first] = true
+currencies[:qar][:symbol] = 'QAR'
+currencies[:qar][:symbol_first] = true
 currencies[:egp][:symbol] = 'EGP'
+currencies[:egp][:symbol_first] = true
+currencies[:irr][:symbol] = 'IRR'
+currencies[:irr][:symbol_first] = true
+
 currencies[:eur][:symbol_first] = false
-currencies[:eur][:thousands_separator] = ' '
+currencies[:eur][:thousands_separator] = '&nbsp;'
 currencies[:tnd][:symbol_first] = true
 currencies[:twd][:symbol_first] = true
 currencies[:dzd][:symbol_first] = true
 currencies[:mad][:symbol_first] = true
 currencies[:rub][:symbol_first] = false
-currencies[:rub][:thousands_separator] = ' '
+currencies[:rub][:thousands_separator] = '&nbsp;'
 currencies[:vnd][:symbol_first] = false
+currencies[:pln][:thousands_separator] = '&nbsp;'
+currencies[:sek][:thousands_separator] = '&nbsp;'
+
+
+currencies.each do |key,currency|
+  Money::Currency.register(currency)
+end
