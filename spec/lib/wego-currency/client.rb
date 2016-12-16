@@ -10,7 +10,7 @@ RSpec.describe WegoCurrency::Client do
 
     it 'returns reponse proto' do
       exchange_rates_response = WegoCurrency::Client.exchange_rates
-      expect(exchange_rates_response.class).to be Wego::Currency::Api::Response
+      expect(exchange_rates_response.class).to be WegoCurrency::Api::Response
     end
 
     it 'returns with default_currency_code' do

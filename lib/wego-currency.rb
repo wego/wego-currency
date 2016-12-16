@@ -22,4 +22,3 @@ end
 
 Gem.find_files("#{WegoCurrency.lib}/wego-currency/**/*.rb").each { |path| require path }
 Gem.find_files("#{WegoCurrency.config}/**/*.rb").each { |path| require path }
-

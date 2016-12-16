@@ -2,15 +2,15 @@ module WegoCurrency
   class Client
     
     def self.exchange_rates
-      headers = Wego::Currency::Api::Headers.new message: 'Success', status_code: 200
+      headers = WegoCurrency::Api::Headers.new message: 'Success', status_code: 200
 
       exchange_rates = Money.default_bank.update_rates.collect do |currency_code, quote|
-        Wego::Currency::ExchangeRate.new(currency_code: currency_code, quote: quote)
+        WegoCurrency::ExchangeRate.new(currency_code: currency_code, quote: quote)
       end
 
       base_currency_code = 'USD'
 
-      Wego::Currency::Api::Response.new(
+      WegoCurrency::Api::Response.new(
         exchange_rates: exchange_rates, 
         base_currency_code: base_currency_code,
         headers: headers,
