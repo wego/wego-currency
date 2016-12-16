@@ -49,18 +49,20 @@ currencies[:irr][:symbol] = 'IRR'
 currencies[:irr][:symbol_first] = true
 
 currencies[:eur][:symbol_first] = false
-currencies[:eur][:thousands_separator] = '&nbsp;'
+currencies[:eur][:thousands_separator] = ' '
 currencies[:tnd][:symbol_first] = true
 currencies[:twd][:symbol_first] = true
 currencies[:dzd][:symbol_first] = true
 currencies[:mad][:symbol_first] = true
 currencies[:rub][:symbol_first] = false
-currencies[:rub][:thousands_separator] = '&nbsp;'
+currencies[:rub][:thousands_separator] = ' '
 currencies[:vnd][:symbol_first] = false
-currencies[:pln][:thousands_separator] = '&nbsp;'
-currencies[:sek][:thousands_separator] = '&nbsp;'
+currencies[:pln][:thousands_separator] = ' '
+currencies[:sek][:thousands_separator] = ' '
 
 
 currencies.each do |key,currency|
   Money::Currency.register(currency)
 end
+
+Money.use_i18n = false
