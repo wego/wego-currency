@@ -5,7 +5,7 @@ require 'money'
 moe = Money::Bank::OpenExchangeRatesBank.new
 moe.secure_connection = true
 moe.cache = Pathname.new(WegoCurrency.root).join('public', 'exchange_rates.json').to_s
-moe.app_id = '01f9f07f87ae417ab69f464d6b87ae26'
+moe.app_id = '1069f481072849b5a4ef270360321baf'
 moe.update_rates
 Money.default_bank = moe
 
