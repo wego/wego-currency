@@ -33,6 +33,7 @@ module WegoCurrency
 
     def self.update_rates
       Money.default_bank.update_rates
+      Money.default_bank.save_rates
     end
   end
 end
