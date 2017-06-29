@@ -16,7 +16,7 @@ module WegoCurrency
   end
 
   def self.config
-    File.join root, 'lib/config'
+    File.join root, 'config'
   end
 end
 
