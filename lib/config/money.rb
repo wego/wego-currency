@@ -5,8 +5,6 @@ require 'money'
 
 moe = Money::Bank::WegoMoneyBank.new
 moe.cache = Pathname.new(Dir.pwd).join('public', 'exchange_rates.json').to_s
-logger.info("cache: ")
-logger.info(moe.cache)
 moe.ttl_in_seconds = 3600
 
 #moe.secure_connection = true
