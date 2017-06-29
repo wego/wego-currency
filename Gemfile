@@ -5,7 +5,7 @@ gemspec
 
 gem 'money'
 gem 'monetize'
-gem 'money-open-exchange-rates'
+gem 'wego-money-bank', git: 'git@github.com:wego/wego-money-bank.git'
 
 group :test, :development do
   gem 'rspec'
