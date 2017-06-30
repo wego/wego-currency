@@ -1,11 +1,12 @@
 # encoding: utf-8
 
-require 'money/bank/open_exchange_rates_bank'
+require 'money/bank/wego_money_bank'
 require 'money'
-moe = Money::Bank::OpenExchangeRatesBank.new
-moe.secure_connection = true
-moe.cache = Pathname.new(WegoCurrency.root).join('public', 'exchange_rates.json').to_s
-moe.app_id = '01f9f07f87ae417ab69f464d6b87ae26'
+
+moe = Money::Bank::WegoMoneyBank.new
+moe.cache = Pathname.new(Dir.pwd).join('public', 'exchange_rates.json').to_s
+moe.ttl_in_seconds = 3600
+
 moe.update_rates
 Money.default_bank = moe
 
