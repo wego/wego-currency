@@ -7,9 +7,6 @@ moe = Money::Bank::WegoMoneyBank.new
 moe.cache = Pathname.new(Dir.pwd).join('public', 'exchange_rates.json').to_s
 moe.ttl_in_seconds = 3600
 
-#moe.secure_connection = true
-#moe.app_id = '01f9f07f87ae417ab69f464d6b87ae26'
-
 moe.update_rates
 Money.default_bank = moe
 
