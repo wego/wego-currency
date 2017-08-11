@@ -24,7 +24,6 @@ RSpec.describe WegoCurrency::Client do
 
     it 'returns amount' do
       WegoCurrency::Client.convert_amount(100, 'SGD', 'PHP')
-
     end
 
 
