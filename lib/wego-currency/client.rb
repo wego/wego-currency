@@ -33,6 +33,10 @@ module WegoCurrency
     def self.is_currency_code_valid?(currency_code)
       all_currencies.include?(currency_code.downcase.to_sym)
     end
+
+    def self.test_currencies
+      @currencies
+    end
     
   end
 end
