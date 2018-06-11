@@ -25,5 +25,16 @@ module WegoCurrency
     def self.convert_amount_usd(amount_usd, new_currency_code)
       convert_amount(amount_usd, 'USD', new_currency_code)
     end
+
+    def self.all_currencies
+      @currencies ||= Money::Currency.table.keys
+    end
+
+    def is_currency_code_valid?(currency_code)
+      all_currencies.include?(currency_code.downcase.to_sym)
+    end
+    
   end
 end
+
+
