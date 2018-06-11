@@ -27,15 +27,11 @@ module WegoCurrency
     end
 
     def self.all_currencies
-      @currencies ||= Money::Currency.table.keys
+      @@currencies ||= Money::Currency.table.keys
     end
 
     def self.is_currency_code_valid?(currency_code)
       all_currencies.include?(currency_code.downcase.to_sym)
-    end
-
-    def self.test_currencies
-      @currencies
     end
     
   end
