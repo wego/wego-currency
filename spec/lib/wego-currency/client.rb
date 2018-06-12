@@ -57,7 +57,7 @@ RSpec.describe WegoCurrency::Client do
       response = WegoCurrency::Client.is_currency_code_valid?("abc")
       expect(response).to eq false
 
-      response = WegoCurrency::Client.is_currency_code_valid?("nil")
+      response = WegoCurrency::Client.is_currency_code_valid?(nil)
       expect(response).to eq false
     end
   end
