@@ -1,5 +1,23 @@
 # WegoCurrency
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'wego-currency'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install wego-currency
+
+## Usage
+
 We are getting the rates from [gem `wego-money-bank`](https://github.com/wego/wego-money-bank)
 
 <b>Converting Currencies:</b>
@@ -9,6 +27,7 @@ We are getting the rates from [gem `wego-money-bank`](https://github.com/wego/we
 <b>Converting Currencies with `usd` as base currency:</b>
 
 `WegoCurrency::Client.convert_amount_usd(amount_usd, new_currency_code)`
+
 This method is a wrapper method of the above with `usd` as a base to convert into new currency code.
 
 <b>To check for all valid currencies: </b>
@@ -29,26 +48,6 @@ returns boolean
 > WegoCurrency::Client.is_currency_code_valid?("abc")
 => false
 ```
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'wego-currency'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install wego-currency
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
