@@ -31,7 +31,7 @@ module WegoCurrency
     end
 
     def self.is_currency_code_valid?(currency_code)
-      currency_code.present? ? all_currencies.include?(currency_code.downcase.to_sym) : false
+      currency_code.present? && all_currencies.include?(currency_code.downcase.to_sym)
     end
     
   end
