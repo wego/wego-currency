@@ -29,11 +29,7 @@ RSpec.describe WegoCurrency::Client do
   
   describe '#convert_invalid_currency_code' do 
     it 'returns error' do
-      begin
-        WegoCurrency::Client.convert_amount(100, 'ABC', 'PHP')
-      rescue StandardError => e
-        expect(e.message).to eql "Unknown currency 'abc'"
-      end
+      expect{WegoCurrency::Client.convert_amount(100, 'ABC', 'PHP')}.to raise_error(StandardError)
     end
   end
   
