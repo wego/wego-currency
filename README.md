@@ -33,7 +33,9 @@ This method is a wrapper method of the above with `usd` as a base to convert int
 <b>To check for all valid currencies: </b>
 
 `WegoCurrency::Client.all_currencies`
+
 returns an array of currency code.
+
 `example: [:sgd,:usd,:clp,:crc]`
 
 <b> To check if currency code is valid </b>
