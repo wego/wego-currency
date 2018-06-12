@@ -39,6 +39,7 @@ returns an array of currency code.
 <b> To check if currency code is valid </b>
 
 `WegoCurrency::Client.is_currency_code_valid?(currency_code)`
+
 Accepts uppercase or lower case string / symbol.
 returns boolean
 
