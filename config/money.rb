@@ -66,4 +66,4 @@ currencies.each do |key,currency|
   Money::Currency.register(currency)
 end
 
-Money.use_i18n = false
+Money.locale_backend = :currency
