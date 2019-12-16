@@ -61,6 +61,33 @@ currencies[:vnd][:symbol_first] = false
 currencies[:pln][:thousands_separator] = ' '
 currencies[:sek][:thousands_separator] = ' '
 
+# african sites currencies
+currencies[:kes][:symbol] = 'KSh'
+currencies[:tzs][:symbol] = 'TSh'
+currencies[:etb][:symbol] = 'Br'
+currencies[:ugx][:symbol] = 'USh'
+currencies[:xof][:symbol] = 'CFA'
+currencies[:xof][:symbol_first] = false
+currencies[:xof][:thousands_separator] = ' '
+currencies[:cdf][:symbol] = 'FC'
+currencies[:cdf][:symbol_first] = false
+currencies[:cdf][:thousands_separator] = ' '
+currencies[:zmw][:symbol] = 'K'
+currencies[:aoa][:symbol] = 'Kz'
+currencies[:aoa][:symbol_first] = false
+currencies[:aoa][:thousands_separator] = ' '
+currencies[:mzn][:symbol] = 'Mtn'
+currencies[:mzn][:symbol_first] = false
+currencies[:mzn][:thousands_separator] = ' '
+currencies[:xaf][:symbol] = 'FCFA'
+currencies[:xaf][:symbol_first] = false
+currencies[:xaf][:thousands_separator] = ' '
+currencies[:rwf][:symbol] = 'Rf'
+currencies[:rwf][:symbol_first] = false
+currencies[:nad][:symbol] = 'N$'
+currencies[:bwp][:symbol] = 'P'
+currencies[:mur][:symbol] = 'Rs'
+
 
 currencies.each do |key,currency|
   Money::Currency.register(currency)
