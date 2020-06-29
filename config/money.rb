@@ -9,6 +9,7 @@ moe.ttl_in_seconds = 3600
 
 moe.update_rates
 Money.default_bank = moe
+Money.rounding_mode = BigDecimal::ROUND_HALF_EVEN
 
 # we don't want to use some of the defaults that come with Money
 # set our own symbols in these cases
