@@ -6,6 +6,13 @@ describe Money do
 
     it 'give correct format' do
       expect(subject).to eq "Rp574.301.550,00"
-    end 
+    end
+  end
+
+  context 'with rounding_mode ROUND_HALF_EVEN' do
+    it 'give correct round value' do
+      expect(Money.from_amount(5.222, 'USD').to_f).to eq 5.22
+      expect(Money.from_amount(5.227, 'USD').to_f).to eq 5.23
+    end
   end
 end
