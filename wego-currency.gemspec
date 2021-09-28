@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'money', '~> 6.13.7'
   spec.add_dependency 'monetize', '~> 1.9.4'
-  spec.add_dependency 'wego-money-bank'
+  spec.add_dependency 'wego-money-bank', '0.1.0'
 end
