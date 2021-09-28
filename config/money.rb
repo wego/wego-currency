@@ -6,7 +6,7 @@ require 'money'
 
 # monkeypatching because we can't push new version to rubygems.org as we don't
 # own the account
-module Money
+class Money
   module Bank
     class WegoMoneyBank
       def fetch_from_url
