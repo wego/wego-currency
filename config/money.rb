@@ -1,7 +1,20 @@
 # encoding: utf-8
 
+require 'open-uri'
 require 'money/bank/wego_money_bank'
 require 'money'
+
+# monkeypatching because we can't push new version to rubygems.org as we don't
+# own the account
+module Money
+  module Bank
+    class WegoMoneyBank
+      def fetch_from_url
+        URI.open(url).read
+      end
+    end
+  end
+end
 
 moe = Money::Bank::WegoMoneyBank.new
 moe.cache = Pathname.new(Dir.pwd).join('public', 'exchange_rates.json').to_s
