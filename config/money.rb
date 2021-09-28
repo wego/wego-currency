@@ -10,7 +10,7 @@ class Money
   module Bank
     class WegoMoneyBank
       def fetch_from_url
-        URI.open(url).read
+        Gem::Version.new(RUBY_VERSION) < Gem::Version.new("3.0") ? open(url).read : URI.open(url).read
       end
     end
   end
